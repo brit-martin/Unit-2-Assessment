@@ -13,7 +13,10 @@
 //     { firstName: 'Karlach', lastName: 'Cliffgate', location: 'Avernus' }
 //   ]);
 //   => ['Gale Dekarios', 'Wyll Ravengard', 'Karlach Cliffgate'];
-function getNames(people) {
+function getNames() {
+  Object.values(firstName)
+  Object.values(lastName)
+
 
 }
 
