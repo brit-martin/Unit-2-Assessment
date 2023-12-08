@@ -8,7 +8,11 @@
 // update and say "Log out". If a user clicks on the button again, its text
 // should switch from "Log Out" to "Log In".
 
-/// TODO: replace this with your code
+const login = document.querySelector("#auth");
+login.addEventListener("click", () => {
+    login.innerText ="Log out"
+    
+})
 
 // Send an alert
 //
@@ -34,7 +38,18 @@
 //     <li>Item</li>  <!-- This was added after double-clicking -->
 //   </ol>
 
-/// TODO: replace this with your code
+const input = document.querySelector("#item-adder");
+const list = document.querySelector("#list");
+
+const addItem = (evt) => {
+    evt.preventDefault();
+    const item = input.value;
+    const li = document.createElement("li");
+    li.innerText = item;
+    list.appendChild(li);
+    input.value = "";
+}
+input.addEventListener("submit", addItem)
 
 // Change colors
 //

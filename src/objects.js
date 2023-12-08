@@ -13,11 +13,12 @@
 //     { firstName: 'Karlach', lastName: 'Cliffgate', location: 'Avernus' }
 //   ]);
 //   => ['Gale Dekarios', 'Wyll Ravengard', 'Karlach Cliffgate'];
-function getNames() {
-  Object.values(firstName)
-  Object.values(lastName)
-
-
+function getNames(people) {
+  let newArr = people.map(() => {
+    return `${people.firstName} ${people.lastName}`  
+  }) 
+  return newArr
+ 
 }
 
 // Given an object representing a person, return their full name (first name and last name).
@@ -30,8 +31,10 @@ function getNames() {
 //   getName({ firstName: 'Gale', lastName: 'Dekarios', location: 'Waterdeep' });
 //   => 'Gale Dekarios'
 function getNameUsingDestructuring(person) {
+
+const newArr = {firstName, lastName} = getNameUsingDestructuring
+ return newArr
 }
-const {firstName, lastName} =
 
 // Given an array of objects representing people, return a new array of the
 // people matching the given location.
@@ -50,7 +53,12 @@ const {firstName, lastName} =
 //     { firstName: 'Wyll', lastName: 'Ravengard', location: "Baldur's Gate" },
 //     { firstName: 'Astarion', lastName: 'Ancunin', location: "Baldur's Gate" }
 //   ];
-function getPeopleByLocation(people, location) {}
+function getPeopleByLocation() {
+  for (let i =0; i < getPeopleByLocation.length; i ++)
+    if(getPeopleByLocation[i].location === "Baldur's Gate"){
+        getPeopleByLocation.splice (i, 1)
+  } return getPeopleByLocation
+}
 
 // Translate a phrase to pirate talk.
 //

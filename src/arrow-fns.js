@@ -71,9 +71,10 @@ function createGreetings(names) {
 function loudLongWords(words) {
     let newArr = words.filter((element, index, array)=>{
         if (element.length > 4)
-        return element.toUpperCase();
+        return element = element.toUpperCase();
     })
     return newArr
 }
+
 
 export { addNums, createGreetings, evens, giveMeTwo, loudLongWords, max };
