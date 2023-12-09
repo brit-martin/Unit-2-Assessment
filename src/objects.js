@@ -14,8 +14,8 @@
 //   ]);
 //   => ['Gale Dekarios', 'Wyll Ravengard', 'Karlach Cliffgate'];
 function getNames(people) {
-  let newArr = people.map(() => {
-    return `${people.firstName} ${people.lastName}`  
+  let newArr = people.map((e, i, a) => {
+    return e.firstName + " " + e.lastName 
   }) 
   return newArr
  
@@ -31,10 +31,9 @@ function getNames(people) {
 //   getName({ firstName: 'Gale', lastName: 'Dekarios', location: 'Waterdeep' });
 //   => 'Gale Dekarios'
 function getNameUsingDestructuring(person) {
-
-const newArr = {firstName, lastName} = getNameUsingDestructuring
- return newArr
-}
+  const {firstName, lastName} = newArr[person] 
+  return newArr[person]
+} 
 
 // Given an array of objects representing people, return a new array of the
 // people matching the given location.
@@ -53,11 +52,8 @@ const newArr = {firstName, lastName} = getNameUsingDestructuring
 //     { firstName: 'Wyll', lastName: 'Ravengard', location: "Baldur's Gate" },
 //     { firstName: 'Astarion', lastName: 'Ancunin', location: "Baldur's Gate" }
 //   ];
-function getPeopleByLocation() {
-  for (let i =0; i < getPeopleByLocation.length; i ++)
-    if(getPeopleByLocation[i].location === "Baldur's Gate"){
-        getPeopleByLocation.splice (i, 1)
-  } return getPeopleByLocation
+function getPeopleByLocation(people, location) {
+  return people.filter("Baldur's Gate")
 }
 
 // Translate a phrase to pirate talk.
@@ -87,8 +83,21 @@ const EN_PIRATE_LOOKUP = {
   hello: 'ahoy',
 };
 
-function translateToPirateTalk(phrase) {}
-
+function translateToPirateTalk(phrase) {
+  phrase.replaceAll("excuse:", "avast")
+  phrase.replaceAll("sir:","matey")
+  phrase.replaceAll("is:", "be")
+  phrase.replaceAll("restroom:", "head")
+  phrase.replaceAll("student:", "swabbie")
+  phrase.replaceAll("friend:", "matey")
+  phrase.replaceAll("restaurant:","galley")
+  phrase.replaceAll("your:","yer")
+  phrase.replaceAll("are:", "be")
+  phrase.replaceAll("my:", "me")
+  phrase.replaceAll("hotel:","fleabag inn")
+  phrase.replaceAll("hello:", "ahoy")
+  return phrase
+}
 // Return the number of occurrences of each word in a string.
 // This function doesn't handle punctuation and is case-sensitive, so you can
 // count 'hello!', 'hello', and 'Hello' as different words.
@@ -118,8 +127,8 @@ function wordCount(str) {}
 //     }
 //   }, 1);
 //   => true
-function isBugAvailable(bug, month) {
-  return bug.availabiltity.months.includes(month)
+function isBugAvailable(bug, months) {
+  return bug.availability.months.includes(months)
 }
 
 // Given an array of objects representing bugs, return an object that'll be
