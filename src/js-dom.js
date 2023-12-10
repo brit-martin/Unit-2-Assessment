@@ -49,7 +49,7 @@ const addItem = (evt) => {
     list.appendChild(li);
     input.value = "";
 }
-input.addEventListener("submit", addItem)
+input.addEventListener("double-click", addItem)
 
 // Change colors
 //
@@ -60,7 +60,19 @@ input.addEventListener("submit", addItem)
 // Clicking on "Turn Stuff Red" should make text red and clicking on "Turn
 // Stuff Blue" should make text blue.
 
-/// TODO: replace this with your code
+const red = document.querySelector('#red');
+const blue = document.querySelector("#blue");
+const colorChanger = document.querySelectorAll(".changes-colors");
+
+red.addEventListener("click",()=>{
+    colorChanger.style.color ="rgb(255, 0, 0)"
+})
+
+blue.addEventListener("click", () => {
+    colorChanger.style.color ="rgb(0, 0, 255)"
+ })
+
+
 
 // Calculate factorial
 //

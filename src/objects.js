@@ -31,9 +31,9 @@ function getNames(people) {
 //   getName({ firstName: 'Gale', lastName: 'Dekarios', location: 'Waterdeep' });
 //   => 'Gale Dekarios'
 function getNameUsingDestructuring(person) {
-  const {firstName, lastName} = newArr[person] 
-  return newArr[person]
-} 
+  const {firstName, lastName} = newArr
+  (person(newArr))
+}
 
 // Given an array of objects representing people, return a new array of the
 // people matching the given location.
@@ -53,7 +53,11 @@ function getNameUsingDestructuring(person) {
 //     { firstName: 'Astarion', lastName: 'Ancunin', location: "Baldur's Gate" }
 //   ];
 function getPeopleByLocation(people, location) {
-  return people.filter("Baldur's Gate")
+ const filter_location = people.filter((e,i,a) => {
+  return e.location == "Baldur's Gate"
+
+ }) 
+ return filter_location
 }
 
 // Translate a phrase to pirate talk.
