@@ -31,10 +31,10 @@ function getNames(people) {
 //   getName({ firstName: 'Gale', lastName: 'Dekarios', location: 'Waterdeep' });
 //   => 'Gale Dekarios'
 function getNameUsingDestructuring(person) {
-  const {firstName, lastName} = newArr
-  (person(newArr))
+  let {firstName, lastName} = personName
+  return personName
 }
-
+ 
 // Given an array of objects representing people, return a new array of the
 // people matching the given location.
 //
@@ -88,18 +88,18 @@ const EN_PIRATE_LOOKUP = {
 };
 
 function translateToPirateTalk(phrase) {
-  phrase.replaceAll("excuse:", "avast")
-  phrase.replaceAll("sir:","matey")
-  phrase.replaceAll("is:", "be")
-  phrase.replaceAll("restroom:", "head")
-  phrase.replaceAll("student:", "swabbie")
-  phrase.replaceAll("friend:", "matey")
-  phrase.replaceAll("restaurant:","galley")
-  phrase.replaceAll("your:","yer")
-  phrase.replaceAll("are:", "be")
-  phrase.replaceAll("my:", "me")
-  phrase.replaceAll("hotel:","fleabag inn")
-  phrase.replaceAll("hello:", "ahoy")
+  EN_PIRATE_LOOKUP.replaceAll("excuse", "avast")
+  EN_PIRATE_LOOKUP.replaceAll("sir","matey")
+  EN_PIRATE_LOOKUP.replaceAll("is", "be")
+  EN_PIRATE_LOOKUP.replaceAll("restroom", "head")
+  EN_PIRATE_LOOKUP.replaceAll("student", "swabbie")
+  EN_PIRATE_LOOKUP.replaceAll("friend", "matey")
+  EN_PIRATE_LOOKUP.replaceAll("restaurant","galley")
+  EN_PIRATE_LOOKUP.replaceAll("your","yer")
+  EN_PIRATE_LOOKUP.replaceAll("are", "be")
+  EN_PIRATE_LOOKUP.replaceAll("my", "me")
+  EN_PIRATE_LOOKUP.replaceAll("hotel","fleabag inn")
+  EN_PIRATE_LOOKUP.replace("hello", "ahoy")
   return phrase
 }
 // Return the number of occurrences of each word in a string.
@@ -109,7 +109,14 @@ function translateToPirateTalk(phrase) {
 // Ex.:
 //   wordCount('hello world')
 //   => { hello: 1, world: 1 }
-function wordCount(str) {}
+function wordCount(str) {
+  let obj = {};
+  str.split(" ").forEach(function(el, i, arr) {
+    obj[el] = obj[el] ? ++obj[el] : 1;
+  });
+  
+  return obj;
+}
 
 // Given an object representing a bug, return true if the given bug is
 // available in the given month.
@@ -176,8 +183,14 @@ function isBugAvailable(bug, months) {
 //     12: [],
 //   }
 
-function buildBugHuntCalendar(bugs) {}
+function buildBugHuntCalendar(bugs) {
+  for (i=0; i < bugs.length; i++){
 
+  }
+}
+//we want to loop through the given objects 
+//make all the values of the old object the new keys
+//find the bug that is in the given month
 export {
   buildBugHuntCalendar,
   getNameUsingDestructuring,

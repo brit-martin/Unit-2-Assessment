@@ -71,7 +71,7 @@ function createGreetings(names) {
 function loudLongWords(words) {
     let newArr = words.filter((element, index, array)=>{
         if (element.length > 4)
-        return element = element.toUpperCase();
+        return element.toUpperCase();
     })
     return newArr
 }

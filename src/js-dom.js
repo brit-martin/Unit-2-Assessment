@@ -10,8 +10,7 @@
 
 const login = document.querySelector("#auth");
 login.addEventListener("click", () => {
-    login.innerText ="Log out"
-    
+    login.innerText ="Log out" 
 })
 
 // Send an alert
@@ -39,17 +38,18 @@ login.addEventListener("click", () => {
 //   </ol>
 
 const input = document.querySelector("#item-adder");
-const list = document.querySelector("#list");
+const ol = document.querySelector("#list");
 
 const addItem = (evt) => {
     evt.preventDefault();
     const item = input.value;
     const li = document.createElement("li");
     li.innerText = item;
-    list.appendChild(li);
+    ol.appendChild(li);
     input.value = "";
 }
-input.addEventListener("double-click", addItem)
+
+
 
 // Change colors
 //
@@ -60,16 +60,16 @@ input.addEventListener("double-click", addItem)
 // Clicking on "Turn Stuff Red" should make text red and clicking on "Turn
 // Stuff Blue" should make text blue.
 
+
+
+
 const red = document.querySelector('#red');
-const blue = document.querySelector("#blue");
-const colorChanger = document.querySelectorAll(".changes-colors");
-
-red.addEventListener("click",()=>{
-    colorChanger.style.color ="rgb(255, 0, 0)"
+red.addEventListener("click", function () {
+    document.querySelectorAll(".changes-colors").style.color = "rgb (255, 0, 0)"
 })
-
-blue.addEventListener("click", () => {
-    colorChanger.style.color ="rgb(0, 0, 255)"
+const blue = document.querySelector("#blue");
+blue.addEventListener("click", function () {
+    document.querySelectorAll(".changes-colors").style.color = "rgb (0, 0, 255)"
  })
 
 
