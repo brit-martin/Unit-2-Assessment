@@ -31,8 +31,8 @@ function getNames(people) {
 //   getName({ firstName: 'Gale', lastName: 'Dekarios', location: 'Waterdeep' });
 //   => 'Gale Dekarios'
 function getNameUsingDestructuring(person) {
-  let {firstName, lastName} = personName
-  return personName
+  let {firstName, lastName} = person
+  return (firstName +" "+ lastName)
 }
  
 // Given an array of objects representing people, return a new array of the
@@ -88,16 +88,33 @@ const EN_PIRATE_LOOKUP = {
 };
 
 function translateToPirateTalk(phrase) {
-  EN_PIRATE_LOOKUP.replaceAll("excuse", "avast")
-  EN_PIRATE_LOOKUP.replaceAll("sir","matey")
-  EN_PIRATE_LOOKUP.replaceAll("is", "be")
-  EN_PIRATE_LOOKUP.replaceAll("restroom", "head")
-  EN_PIRATE_LOOKUP.replaceAll("student", "swabbie")
-  EN_PIRATE_LOOKUP.replaceAll("friend", "matey")
-  EN_PIRATE_LOOKUP.replaceAll("restaurant","galley")
-  EN_PIRATE_LOOKUP.replaceAll("your","yer")
-  EN_PIRATE_LOOKUP.replaceAll("are", "be")
-  EN_PIRATE_LOOKUP.replaceAll("my", "me")
+  for (i= 0; i <EN_PIRATE_LOOKUP.length; i++)
+  if (i === excuse .replaceAll("avast")) {
+   if( i=== sir.replaceAll("matey")){
+    if (i=== is .replaceAll("be")){
+      if( i === restroom .replaceAll("head")){
+        if( i === student .reeplaceAll("swabbie")){
+          if (i=== friend .replaceAll("matey")){
+            if(i === restaurant .replaceAll("galley")){
+              if (i === your .replaceAll("yer")){
+                if ( i=== are .replaceAll("be")){
+                  if(i=== my .replaceAll("me")){
+                    if(i === hotel .replaceAll("fleabag inn")){
+                      if (i === hello .replaceAll("ahoy")){
+                        return EN_PIRATE_LOOKUP.i
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    }
+  }
+  
   EN_PIRATE_LOOKUP.replaceAll("hotel","fleabag inn")
   EN_PIRATE_LOOKUP.replace("hello", "ahoy")
   return phrase
